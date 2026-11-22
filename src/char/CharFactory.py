@@ -1,4 +1,5 @@
 from src.Labels import Labels
+from src.char.CustomCharLoader import load_team_char_class
 from src.char.Aemeath import Aemeath
 from src.char.Aalto import Aalto
 from src.char.Augusta import Augusta
@@ -201,7 +202,7 @@ def get_char_by_pos(task, box, index, old_char):
         char = _find_registered_char(task, box, info)
         if char:
             cls = info.get('cls')
-            if not isinstance(old_char, cls):
+            if not isinstance(old_char, cls) and getattr(old_char, "_team_builtin_class", None) is not cls:
                 return _apply_char_config(task, cls(task, index, char_name=info['canonical_name'],
                                                     confidence=char.confidence,
                                                     ring_index=info.get('ring_index', -1),
@@ -226,6 +227,36 @@ def get_char_by_pos(task, box, index, old_char):
     if task.debug:
         task.screenshot(f'could not find char {index}')
     return BaseChar(task, index, char_name=name)
+
+
+def apply_team_char_classes(task, chars):
+    """Apply custom code only after the complete three-character team is known."""
+    infos = [char_dict.get(char.char_name) if char else None for char in chars]
+    team = [info['cls'] for info in infos if info]
+    complete = len(chars) == len(set(team)) == 3
+    for index, (char, info) in enumerate(zip(chars, infos)):
+        if not info:
+            continue
+        builtin_cls = info['cls']
+        desired_cls = load_team_char_class(builtin_cls, team) if complete else builtin_cls
+        if type(char) is desired_cls:
+            continue
+        replacement = desired_cls(
+            task,
+            char.index,
+            char_name=char.char_name,
+            confidence=char.confidence,
+            ring_index=char.ring_index,
+            char_type=char.char_type,
+            buff_time=char.buff_time,
+        )
+        for key in ('last_switch_time', 'last_switch_in_time', 'last_outro_time',
+                    'last_res', 'last_echo', 'last_liberation', 'is_current_char',
+                    'has_intro', 'current_con', 'target_box_short_combat_check'):
+            setattr(replacement, key, getattr(char, key))
+        replacement._team_builtin_class = builtin_cls
+        chars[index] = replacement
+    return chars
 
 
 def is_float(s):

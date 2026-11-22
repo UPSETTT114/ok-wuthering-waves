@@ -159,6 +159,7 @@ monthly_card_config_option = ConfigOption('Monthly Card Config', {
 config = {
     'debug': False,  # Optional, default: False
     'custom_tasks': True,
+    'custom_tabs': [["src.gui.CharacterCodeTab", "CharacterCodeTab"]],
     "gui": {
         "type": "qt",
     },

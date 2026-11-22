@@ -2087,3 +2087,162 @@ msgstr "結晶波片をエコーセットの無音区に使用しました"
 #: src/task/CultivationTask.py
 msgid "{name} already cleared ({defeated}/{total})"
 msgstr "{name} はクリア済み（{defeated}/{total}）"
+
+msgid "Character Code"
+msgstr "キャラクターコード"
+
+msgid "Ask AI"
+msgstr "AIに相談"
+
+msgid "Unsaved changes"
+msgstr "未保存の変更"
+
+msgid "Unsaved Changes"
+msgstr "未保存の変更"
+
+msgid "Discard unsaved character code changes?"
+msgstr "未保存のキャラクターコードの変更を破棄しますか？"
+
+msgid "Saved and reloaded"
+msgstr "保存して再読み込みしました"
+
+msgid "Ask AI template copied. Paste it into an AI chatbot."
+msgstr "AI用テンプレートをコピーしました。AIチャットボットに貼り付けてください。"
+
+msgid "Copied"
+msgstr "コピー済み"
+
+msgid "I want to implement:"
+msgstr "実装したい内容:"
+
+msgid "Please modify the full {class_name} character automation code above."
+msgstr "上記の {class_name} キャラクター自動化コード全体を修正してください。"
+
+msgid ""
+"Return only the complete modified Python code for the whole file, not a "
+"patch and not an explanation."
+msgstr "パッチや説明ではなく、ファイル全体の完全な修正済み Python コードのみを返してください。"
+
+msgid ""
+"Keep the class name as {class_name}. Preserve imports that are still needed."
+msgstr "クラス名は {class_name} のままにしてください。必要な import は残してください。"
+
+msgid ""
+"Use this BaseChar reference while reasoning about helper methods, task APIs,"
+" state, switching, cooldowns, and combat flow:"
+msgstr ""
+"ヘルパーメソッド、タスク API、状態、切り替え、クールダウン、戦闘フローを検討する際は、この BaseChar リファレンスを使用してください:"
+
+msgid "All fields are required."
+msgstr "すべての項目を入力してください。"
+
+msgid "Choose Export Folder"
+msgstr "エクスポート先フォルダーを選択"
+
+msgid "Confirm Import"
+msgstr "インポートを確認"
+
+msgid "Create Team"
+msgstr "チームを作成"
+
+msgid "Create or import a team to edit character code."
+msgstr "キャラクターコードを編集するには、チームを作成またはインポートしてください。"
+
+msgid "Export Team"
+msgstr "チームをエクスポート"
+
+msgid "Import"
+msgstr "インポート"
+
+msgid "Import Team"
+msgstr "チームをインポート"
+
+msgid "Importing will override the local code for this team."
+msgstr "インポートすると、このチームのローカルコードが上書きされます。"
+
+msgid "Invalid Team Archive"
+msgstr "無効なチームアーカイブ"
+
+msgid "Missing Information"
+msgstr "情報が不足しています"
+
+msgid "Modified"
+msgstr "更新日時"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Reset Character Code"
+msgstr "キャラクターコードをリセット"
+
+msgid "Reset this character to built in code for this team?"
+msgstr "このチームのキャラクターを組み込みコードに戻しますか？"
+
+msgid "Reset to Built In"
+msgstr "組み込みコードに戻す"
+
+msgid "Save changes before exporting."
+msgstr "エクスポートする前に変更を保存してください。"
+
+msgid "Select 3 different characters"
+msgstr "異なるキャラクターを3人選択"
+
+msgid "Team"
+msgstr "チーム"
+
+msgid "Team character code saved and reloaded for the matching team."
+msgstr "チーム用キャラクターコードを保存し、一致するチームに再読み込みしました。"
+
+msgid "Team character code saved."
+msgstr "チーム用キャラクターコードを保存しました。"
+
+msgid "Team created."
+msgstr "チームを作成しました。"
+
+msgid "Team exported to {path}"
+msgstr "チームを {path} にエクスポートしました"
+
+msgid "Team imported and reloaded for the matching team."
+msgstr "チームをインポートし、一致するチームに再読み込みしました。"
+
+msgid "Team imported."
+msgstr "チームをインポートしました。"
+
+msgid "Teams"
+msgstr "チーム"
+
+msgid "The archive is for a different team."
+msgstr "このアーカイブは別のチーム用です。"
+
+msgid "Upload Team"
+msgstr "チームをアップロード"
+
+msgid "Workshop"
+msgstr "ワークショップ"
+
+msgid "Workshop Error"
+msgstr "ワークショップエラー"
+
+msgid "Workshop archive is too large."
+msgstr "ワークショップのアーカイブが大きすぎます。"
+
+msgid "Workshop download URL is invalid."
+msgstr "ワークショップのダウンロード URL が無効です。"
+
+msgid "Zip files (*.zip)"
+msgstr "ZIP ファイル (*.zip)"
+
+msgid "Workshop response is too large."
+msgstr "ワークショップの応答が大きすぎます。"
+
+msgid "Workshop returned invalid JSON."
+msgstr "ワークショップから無効な JSON が返されました。"
+
+msgid "Workshop response is invalid."
+msgstr "ワークショップの応答が無効です。"
+
+msgid "Workshop returned a different team."
+msgstr "ワークショップから別のチームが返されました。"
+
+msgid "{team_name} - Team Workshop"
+msgstr "{team_name} - チームワークショップ"
